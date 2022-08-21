@@ -1,0 +1,17 @@
+name: post
+on:
+  push
+  schedule:
+    - cron: "0 * * * *"
+jobs:
+  sock:
+    runs-on: ubuntu-latest
+	    steps:
+	      - uses: actions/checkout@v2
+        - uses: actions/setup-python@v4
+          with:
+            python-version: '3.6'
+            cache: 'pip'
+	      - run: |
+          pip install faker
+          python3 sock_local.py
