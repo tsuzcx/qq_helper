@@ -13,5 +13,5 @@ jobs:
           python-version: '3.6'
           cache: 'pip'
       - run: |
-        pip install faker
-        python3 sock_local.py
+          pip install faker
+          python3 sock_local.py
